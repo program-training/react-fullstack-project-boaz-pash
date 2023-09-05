@@ -5,7 +5,7 @@ import {
   createTrip,
   updateTrip,
   deleteTrip,
-} from '../utils/trips';
+} from '../utils/trips'; 
 import { Trip } from '../models/trip';
 
 // Get all trips
