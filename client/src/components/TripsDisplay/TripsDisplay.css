@@ -1,0 +1,38 @@
+#trips-container{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ width:100vh ;
+ flex-direction: row;
+ flex-wrap: wrap;
+}
+.trip-card{
+ width: 30%;
+ background-color: rgb(17, 0, 255);
+ color: azure;
+ cursor: pointer;
+ margin: 2%;
+}
+#trips-container-id{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width:100vh ;
+ flex-direction: row;
+ flex-wrap: wrap;
+}
+.trip-card-id{
+ font-size: x-large;
+ width: 70%;
+ background-color: black;
+ color: azure;
+ cursor: pointer;
+ margin: 2%;
+}
+.functions-buttons-container{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ padding-right: 20%;
+  padding-left: 20%;
+}

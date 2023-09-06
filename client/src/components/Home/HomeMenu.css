@@ -1,13 +1,24 @@
+#container{
+   width: 100vh;
+   /* display: flex; */
+   height: 100%;
+}
 #home-container {
   display: flex;
-  background-color: rgb(133, 123, 123);
   align-items: center;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
+ 
 }
 .home-navigate {
-  background-color: rgb(113, 200, 212);
+  display: flex;
+  background-color: rgb(113, 255, 212);
+  justify-content: center;
   width: 30%;
+  height: 200px;
   margin: 2%;
   cursor: pointer;
+  align-items: center;
+  font-size: xx-large;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }

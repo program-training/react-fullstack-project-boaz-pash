@@ -3,9 +3,9 @@ import "./input.css";
 interface InputProps {
   type: "text" | "number" | "email" | "password";
   label: string ;
-  value: string | number;
-  name: string;
-  placeholder: string;
+  value: string | number|undefined;
+  name: string |undefined
+  placeholder: string|undefined;
   error: boolean;
   disabled?: boolean;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;

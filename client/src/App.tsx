@@ -6,21 +6,28 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import TripsDisplay from "./components/TripsDisplay/TripsDisplay";
 import TripDetails from "./components/TripDetail/TripDetails";
+import UpdateTripForm from "./components/UpdateTripForm/UpdateTripForm";
+import TripForm from "./components/TripForm/TripForm";
+import TripContextProvider from "./contexts/tripContext";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="signUp" element={<SignUp />} />
-          <Route path="login" element={<Login />} />
-          <Route path="trips" element={<TripsDisplay />} />
-          <Route path="trips/:id" element={<TripDetails id={"1"} />} />
-          {/* <Route path="*" element={<NoPage />} /> */}
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <TripContextProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="signUp" element={<SignUp />} />
+            <Route path="login" element={<Login />} />
+            <Route path="trips" element={<TripsDisplay />} />
+            <Route path="trips/:id" element={<TripDetails />} />
+            <Route path="trips/:id/edit" element={<UpdateTripForm />} />
+            <Route path="add"element={<TripForm trip={null} method="post" url="/trips" />} />
+            {/* <Route path="*" element={<NoPage />} /> */}
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </TripContextProvider>
   );
 }
 
