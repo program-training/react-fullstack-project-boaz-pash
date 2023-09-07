@@ -18,15 +18,11 @@ const TripDetails: React.FC = () => {
   useEffect(() => {
     let temp: Trip;
     const getSpecificTrip = async () => {
-       temp = (
-        await axios(`http://localhost:3000/api${location.pathname}`)
-      ).data;
+      temp = (await axios(`http://localhost:3000/api${location.pathname}`))
+        .data;
       setThisTrip(temp);
-      // console.log(thisTrip);
     };
-    const handelContext = () => {
-     
-    };
+    const handelContext = () => {};
     getSpecificTrip();
     handelContext();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -43,12 +39,11 @@ const TripDetails: React.FC = () => {
   };
 
   const handelEditButton = () => {
-     if (!tripContext) return null;
-     const { setTrip } = tripContext;
-     setTrip(thisTrip);
+    if (!tripContext) return null;
+    const { trip, setTrip } = tripContext;
+    setTrip(thisTrip);
     console.log(tripContext);
-    console.log("handelNavigate");
-    thisTrip && navigate(`/trips/${thisTrip.id}/edit`);
+    thisTrip && navigate(`/trips/${trip?.id}/edit`);
   };
 
   return (
@@ -68,7 +63,9 @@ const TripDetails: React.FC = () => {
             <div className="functions-buttons-container">
               <RiDeleteBin6Line onClick={deleteTrip} />
               <FiEdit2 onClick={handelEditButton} />
-             <Link to={"/add"}><BiMessageAltAdd /></Link> 
+              <Link to={"/add"}>
+                <BiMessageAltAdd />
+              </Link>
             </div>
           </div>
         ) : (

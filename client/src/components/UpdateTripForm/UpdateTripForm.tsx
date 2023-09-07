@@ -11,7 +11,6 @@ const UpdateTripForm: React.FC = () => {
       if (!tripContext) return null;
       const { trip } = tripContext;
       setThisTrip(trip);
-      console.log(trip);
     };
     getTripData();
   }, []);

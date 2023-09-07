@@ -41,7 +41,7 @@ const TripForm: React.FC<Props> = (props) => {
       <form onSubmit={handleSubmit}>
         <Input
           type="text"
-          name="Name"
+          name="n..ame"
           onChange={handleChange}
           value={formData?.name}
           disabled={false}

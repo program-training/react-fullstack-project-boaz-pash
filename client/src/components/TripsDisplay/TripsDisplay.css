@@ -5,13 +5,15 @@
  width:100vh ;
  flex-direction: row;
  flex-wrap: wrap;
+ background-color: rgba(14, 13, 0, 0.349);
 }
 .trip-card{
  width: 30%;
- background-color: rgb(17, 0, 255);
- color: azure;
+ background-color: rgb(218, 232, 243);
+ color: rgb(0, 0, 0);
  cursor: pointer;
  margin: 2%;
+ border-radius: 5px;
 }
 #trips-container-id{
  display: flex;
